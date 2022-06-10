@@ -4,7 +4,7 @@ import { endpoints } from '../integration/endpoints';
 import { CONSTANTS } from '../integration/constants';
 import * as login from '../fixtures/login.json';
 
-Cypress.Commands.add('get', (url: string) => {
+Cypress.Commands.add('fetch', (url: string) => {
     // 'cookie': `conid=${conid}; salt=${salt1}; nonce=${nonce1}`
     cy.request('GET', url);
 });

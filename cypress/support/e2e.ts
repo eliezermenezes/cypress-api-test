@@ -7,7 +7,7 @@ declare global {
              * Custom command to get request
              * @param url url
              */
-            get<T = any>(url: string): Chainable<Response<T>>;
+            fetch<T = any>(url: string): Chainable<Response<T>>;
             /**
              * Custom command to post request
              * @param url url

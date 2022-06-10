@@ -11,7 +11,7 @@ describe('Testando API de Wireless', () => {
     it('Obtendo dados do wireless 2.4GHz - GET', () => {
         // espera por 1 segundo antes de efetuar a requisição
         cy.wait(1000);
-        cy.get(endpoints.wireless.wifi2g).should(({ status, body }) => {
+        cy.fetch(endpoints.wireless.wifi2g).should(({ status, body }) => {
             expect(status).to.be.equal(200);
             expect(body).is.not.empty;
             expect(body[0]).to.have.property('wireless');
