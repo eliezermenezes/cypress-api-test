@@ -1,0 +1,18 @@
+{
+  "name": "test-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "run": "cypress run --record --key c11e1382-c714-4731-b7a4-c16df2633df2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.7.0",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,8 @@
+{
+    "baseUrl": "http://172.16.219.128:8080/api/",
+    "integrationFolder": "cypress/integration/api-tests",
+    "pluginsFile": false,
+    "video": false,
+    "screenshotOnRunFailure": false,
+    "projectId": "4zwujf"
+}
