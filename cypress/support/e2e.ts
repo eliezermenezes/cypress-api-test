@@ -1,4 +1,5 @@
-import './commands'
+import "./commands";
+import "./custom-commands";
 
 declare global {
     namespace Cypress {
@@ -6,14 +7,29 @@ declare global {
             /**
              * Custom command to get request
              * @param url url
+             *  @param options request options
              */
-            fetch<T = any>(url: string): Chainable<Response<T>>;
+            fetch<T = any>(url: string, options?: Partial<RequestOptions>): Chainable<Response<T>>;
             /**
              * Custom command to post request
              * @param url url
-             * @param body request data
+             * @param options request options
              */
-            post<T = any>(url: string, body?: RequestBody): Chainable<Response<T>>;
+            post<T = any>(url: string, options?: Partial<RequestOptions>): Chainable<Response<T>>;
+
+            /**
+             * Custom command to put request
+             * @param url url
+             * @param options request options
+             */
+            put<T = any>(url: string, options?: Partial<RequestOptions>): Chainable<Response<T>>;
+
+            /**
+             * Custom command to delete request
+             * @param url url
+             * @param options request options
+             */
+            delete<T = any>(url: string, options?: Partial<RequestOptions>): Chainable<Response<T>>;
 
             /**
              * Custom command to login request

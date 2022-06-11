@@ -9,11 +9,11 @@ export class Utils {
     }
 
     static getCookieValue(headers: { [key: string]: string | string[] }, key: string): string {
-        let cookieValue = '';
+        let cookieValue = "";
 
-        for (const cookie of headers['set-cookie']) {
-            const firstPart = cookie.split(';')[0];
-            const separator = firstPart.indexOf('=');
+        for (const cookie of headers["set-cookie"]) {
+            const firstPart = cookie.split(";")[0];
+            const separator = firstPart.indexOf("=");
             const name = firstPart.substring(0, separator);
             const value = firstPart.substring(separator + 1);
 

@@ -1,0 +1,3 @@
+export const CONSTANTS = {
+    LOGIN_MAX_CNONCE: 9999999999999999999,
+};
