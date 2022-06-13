@@ -1,7 +1,3 @@
-beforeEach(() => {
-    Cypress.Cookies.preserveOnce("salt", "nonce", "conid");
-});
-
 Cypress.Commands.add("fetch", (url: string, options?: Partial<Cypress.RequestOptions>) => {
     cy.request({
         method: "GET",

@@ -9,4 +9,13 @@ export default defineConfig({
         baseUrl: "http://172.16.219.128:8080/api/",
         specPattern: "cypress/integration/api-tests/**/*.{js,jsx,ts,tsx}",
     },
+    reporter: "mochawesome",
+    reporterOptions: {
+        reportDir: "cypress/report",
+        charts: true,
+        reportPageTitle: "cypress-report",
+        saveHtml: true,
+        saveJson: true,
+        overwrite: true,
+    },
 });

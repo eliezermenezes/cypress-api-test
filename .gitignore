@@ -1,3 +1,5 @@
+/cypress/report
+
 # dependencies
 /node_modules
 

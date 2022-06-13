@@ -4,6 +4,10 @@ import { endpoints } from "../endpoints";
 import { CONSTANTS } from "../constants";
 import * as login from "../fixtures/login.json";
 
+beforeEach(() => {
+    Cypress.Cookies.preserveOnce("salt", "nonce", "conid");
+});
+
 Cypress.Commands.add("login", (username = login.username, password = login.password) => {
     // first get the login params
     cy.post(endpoints.loginParams, { body: `login=${username}` }).should(({ headers, status }) => {
@@ -27,6 +31,7 @@ Cypress.Commands.add("login", (username = login.username, password = login.passw
 
 Cypress.Commands.add("logout", () => {
     cy.post(endpoints.logout).should(({ status }) => {
+        cy.clearCookies();
         expect(status).to.be.oneOf([200, 201]);
     });
 });

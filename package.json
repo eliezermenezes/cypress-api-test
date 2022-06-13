@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open",
-    "run": "cypress run --record --key c11e1382-c714-4731-b7a4-c16df2633df2"
+    "open": "cypress open",
+    "test": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^10.0.3",
+    "mochawesome": "^7.1.3",
     "typescript": "^4.7.3"
   },
   "dependencies": {}
